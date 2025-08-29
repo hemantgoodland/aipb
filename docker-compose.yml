@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  goodland-pickleball:
+    build: .
+    ports:
+      - "80:8000"
+    environment:
+      - LOREX_IP=192.168.1.108
+      - LOREX_USERNAME=hemant@goodlandpickleball.com
+      - LOREX_PASSWORD=Rohan12#
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    restart: unless-stopped
